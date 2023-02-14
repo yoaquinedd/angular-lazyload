@@ -1,1 +1,28 @@
-<p>heroe works!</p>
+<mat-grid-list cols="1" *ngIf="!heroe; else divHeroe">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroe>
+    <!-- {{heroe | json}} -->
+
+    <div>
+        <img [src]="heroe | imagen">
+        
+    </div>
+    <ul>
+        <li><h2>{{heroe.superhero}}</h2></li>
+        <li><h2>{{heroe.alter_ego}}</h2></li>
+        <li><h2>{{heroe.publisher}}</h2></li>
+
+    </ul>
+    <button mat-button 
+            color="warn"
+            (click)=regresar()
+            >Regresar</button>
+
+   
+</ng-template>
+
+

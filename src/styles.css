@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
+a .mat-icon {
+    padding-top: 5px;
+    margin: 0 10px;
+}
+
+.spacer{
+    flex: auto;
+}
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* This is better for small screens, once min() is better supported */
+    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    gap: 1rem;
+    
+  }
+
+ 
+
